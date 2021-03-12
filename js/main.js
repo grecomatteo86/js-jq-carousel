@@ -42,9 +42,21 @@ $(function(){
     function () {
 
       var imgActive = $('.images img.active');
+      var imgFirst = $('.images img.first');
+      var imgLast = $('.images img.last');
 
-      imgActive.removeClass('active');
-      imgActive.prev().addClass('active');
+      if (imgFirst.hasClass('active')) {
+
+        imgActive.removeClass('active');
+        imgLast.addClass('active');
+
+      } else {
+
+        imgActive.removeClass('active');
+        imgActive.prev().addClass('active');
+
+      }
+
 
     }
 
