@@ -2,6 +2,7 @@ $(function(){
 
   var next = $('.next');
   var prev = $('.prev');
+  var bull = $('.fa-circle');
 
 
   next.click(
@@ -18,12 +19,14 @@ $(function(){
 
       if (imgLast.hasClass('active') && bulletLast.hasClass('active')) {
 
+
         imgActive.removeClass('active');
         imgFirst.addClass('active');
         bulletActive.removeClass('active');
         bulletFirst.addClass('active');
 
       } else {
+
 
         imgActive.removeClass('active');
         imgActive.next().addClass('active');
@@ -33,6 +36,7 @@ $(function(){
       }
 
     }
+
 
   );
 
@@ -65,6 +69,83 @@ $(function(){
 
       }
 
+
+    }
+
+  );
+
+
+  bull.eq(0).click(
+
+    function () {
+
+      var imgActive = $('.images img.active');
+      var img = $('.images img');
+      var bull = $('.nav .fa-circle');
+
+      if (img.eq(1).hasClass('active') || img.eq(2).hasClass('active') || img.eq(3).hasClass('active')) {
+        img.removeClass('active');
+        img.eq(0).addClass('active');
+        bull.removeClass('active');
+        bull.eq(0).addClass('active');
+      }
+
+    }
+
+  );
+
+  bull.eq(1).click(
+
+    function () {
+
+      var imgActive = $('.images img.active');
+      var img = $('.images img');
+      var bull = $('.nav .fa-circle');
+
+      if (img.eq(0).hasClass('active') || img.eq(2).hasClass('active') || img.eq(3).hasClass('active')) {
+        img.removeClass('active');
+        img.eq(1).addClass('active');
+        bull.removeClass('active');
+        bull.eq(1).addClass('active');
+      }
+
+    }
+
+  );
+
+  bull.eq(2).click(
+
+    function () {
+
+      var imgActive = $('.images img.active');
+      var img = $('.images img');
+      var bull = $('.nav .fa-circle');
+
+      if (img.eq(0).hasClass('active') || img.eq(1).hasClass('active') || img.eq(3).hasClass('active')) {
+        img.removeClass('active');
+        img.eq(2).addClass('active');
+        bull.removeClass('active');
+        bull.eq(2).addClass('active');
+      }
+
+    }
+
+  );
+
+  bull.eq(3).click(
+
+    function () {
+
+      var imgActive = $('.images img.active');
+      var img = $('.images img');
+      var bull = $('.nav .fa-circle');
+
+      if (img.eq(0).hasClass('active') || img.eq(1).hasClass('active') || img.eq(2).hasClass('active')) {
+        img.removeClass('active');
+        img.eq(3).addClass('active');
+        bull.removeClass('active');
+        bull.eq(3).addClass('active');
+      }
 
     }
 
