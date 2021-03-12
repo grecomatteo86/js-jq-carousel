@@ -45,15 +45,23 @@ $(function(){
       var imgFirst = $('.images img.first');
       var imgLast = $('.images img.last');
 
-      if (imgFirst.hasClass('active')) {
+      var bulletActive = $('.nav > i.active');
+      var bulletFirst = $('.nav > i.first');
+      var bulletLast = $('.nav > i.last');
+
+      if (imgFirst.hasClass('active') && bulletFirst.hasClass('active')) {
 
         imgActive.removeClass('active');
         imgLast.addClass('active');
+        bulletActive.removeClass('active');
+        bulletLast.addClass('active');
 
       } else {
 
         imgActive.removeClass('active');
         imgActive.prev().addClass('active');
+        bulletActive.removeClass('active');
+        bulletActive.prev().addClass('active');
 
       }
 
