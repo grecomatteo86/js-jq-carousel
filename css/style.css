@@ -58,6 +58,7 @@ body{
 }
 .bullets_bar > i {
   margin: 0 20px;
+  cursor: pointer;
 }
 .bullets_bar > i.active {
   color: blue;
